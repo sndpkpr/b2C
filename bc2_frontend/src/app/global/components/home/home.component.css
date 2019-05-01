@@ -1,0 +1,16 @@
+.term {
+    background: cadetblue;
+    color: white;
+    padding: 3px;
+    border-radius: 25px;
+    float: left;
+}
+
+.value {
+    float: right;
+}
+
+.card {
+    width: 18rem; border: solid; padding : 10px; margin : 10px;
+    display: inline-block
+}
