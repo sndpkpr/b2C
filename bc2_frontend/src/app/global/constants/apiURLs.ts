@@ -1,3 +1,3 @@
 export const urlAPIs = {
-    fetchJson: 'code_challenge'
+    fetchJson: 'api/code_challenge'
 };

@@ -35,7 +35,10 @@ app.use(cors({
   }
 }));
 
-app.use('/', indexRouter);
+const publicDir = __dirname + '/public/dist';
+app.use('/', express.static(publicDir));
+
+app.use('/api/', indexRouter);
 // app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
