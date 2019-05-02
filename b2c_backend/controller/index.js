@@ -5,6 +5,10 @@ const Response = require('../lib/response.js')
 const common = require("../config/common")
 const statusCode = common.statusCode
 const statusMsg = common.messages
+const Dublin = {
+    latitude: "53.339428",
+    longitude: "-6.257664"
+}
 
 exports.codeChallenge = function (req, res, next) {
     const Request = req.body ? req.body : {};
@@ -49,7 +53,7 @@ async function geodist(data) {
     return new Promise(function (resolve, reject) {
         try {
             var temp = geolib.getDistance(
-                { latitude: "53.339428", longitude: "-6.257664" },
+                { latitude: Dublin.latitude, longitude: Dublin.longitude },
                 { latitude: data.latitude, longitude: data.longitude }
             );
             data.distance = temp / 1000;
